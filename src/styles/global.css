@@ -1,0 +1,39 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+button {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b46bff;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-align: center;
+  font-weight: bold;
+  color: var(--color-white);
+  margin: 2rem 0;
+}

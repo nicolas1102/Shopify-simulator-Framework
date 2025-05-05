@@ -1,0 +1,1 @@
+{"version":3,"file":"styles.css","mappings":";;;AAAA;EACE,8BAA8B;EAC9B,kCAAkC;EAClC,SAAS;EACT,UAAU;AACZ,C","sources":["webpack://shopify-simulator/./src/styles.css"],"sourcesContent":["body {\r\n  font-family: Arial, sans-serif;\r\n  background-color: rgb(24, 230, 68);\r\n  margin: 0;\r\n  padding: 0;\r\n}"],"names":[],"sourceRoot":""}
