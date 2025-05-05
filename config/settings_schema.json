@@ -34,19 +34,4 @@
       }
     ]
   },
-  {
-    "name": "Featured Products",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading Text"
-      },
-      {
-        "type": "color",
-        "id": "background_color",
-        "label": "Background Color"
-      }
-    ]
-  },
 ]

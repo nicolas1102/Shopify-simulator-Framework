@@ -6,13 +6,6 @@
         "banner_bar_message": "Free Shipping on Orders Over $100"
       }
     },
-    "featured-products": {
-      "type": "featured-products",
-      "settings": {
-        "heading": "Our Featured Products",
-        "background_color": "#ffffff"
-      }
-    },
     "hero-banner": {
       "type": "hero-banner",
       "settings": {
