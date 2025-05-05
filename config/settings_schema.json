@@ -1,5 +1,15 @@
 [
   {
+    "name": "Hero Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "marquee_text",
+        "label": "Top Bar Message",
+      }
+    ]
+  },
+  {
     "name": "Featured Products",
     "settings": [
       {
@@ -13,5 +23,5 @@
         "label": "Background Color"
       }
     ]
-  }
+  },
 ]
