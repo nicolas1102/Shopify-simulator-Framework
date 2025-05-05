@@ -8,7 +8,9 @@
   </head>
   <body>
     {% include 'hero-banner.liquid' %}
+    {% comment %} {% include 'header.liquid' %} {% endcomment %}
     {% include 'featured-products.liquid' %}
-    <script src="/main.js"></script>
+    {% comment %} {% include 'footer.liquid' %} {% endcomment %}
+    <script src="/main.js" defer></script>
   </body>
 </html>
