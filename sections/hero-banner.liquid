@@ -1,5 +1,27 @@
-<section class="top-bar">
-  <div>
-    <marquee>{{ settings['hero-banner'].settings.marquee_text }}</marquee>
+<section class="hero-banner">
+  <div class="container hero-banner__image-wrapper">
+    <img
+      src="/assets/{{settings['hero-banner'].settings.background_image}}"
+      alt="Hero Banner"
+      class="hero-banner__image"
+      width="100%"
+      height="auto"
+    >
+    <a href="{{ settings['hero-banner'].settings.button_link }}" class="hero-banner__button">
+      {{ settings['hero-banner'].settings.button_text }}
+    </a>
+  </div>
+
+  <div class="hero-banner__marquee">
+    <div class="marquee__wrapper">
+      <span class="marquee__container">
+        {% for i in (1..10) %}
+          <span class="marquee__text">
+            <span class="marquee__star">✦</span>
+            <span>{{ settings['hero-banner'].settings.marquee_text }}</span>
+          </span>
+        {% endfor %}
+      </span>
+    </div>
   </div>
 </section>

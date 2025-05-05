@@ -14,6 +14,21 @@
     "settings": [
       {
         "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+      },
+      {
+        "type": "text",
+        "id": "button_link",
+        "label": "Button Link",
+      },
+      {
+        "type": "text",
+        "id": "background_image",
+        "label": "Background Image",
+      },
+      {
+        "type": "text",
         "id": "marquee_text",
         "label": "Top Bar Message",
       }
