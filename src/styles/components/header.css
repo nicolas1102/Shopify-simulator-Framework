@@ -1,0 +1,87 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* background-color: #0f0f11; */
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px ;
+  margin-bottom: 10px ;
+}
+
+.site-header__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo__separator{
+  border: 5px;
+  height: 30px;
+  width: 30px; 
+  border-color: #7f47f4;
+  margin: 1rem 0;
+}
+
+.site-header__title h2 {
+  font-family: 'Bebas Neue', sans-serif; /* o la más similar que uses */
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.payments__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #7f47f4;
+  border-radius: 9999px;
+  padding: 5px 15px;
+}
+
+.payments__text {
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+}
+
+.payments__wrapper img {
+  width: 26px;
+  height: 26px;
+}
+
+.site-header--scrolled {
+  background-color: rgba(15, 15, 17, 0.8); /* patrón de transparencia */
+  backdrop-filter: blur(6px);
+}
+
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.site-header__nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .site-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header__payments {
+    order: 3;
+  }
+}

@@ -7,7 +7,7 @@
   --color-accent: #762bfb;
   --color-text: #f2f2f2;
   --color-gray: #1e1e1e;
-  --font-family: 'Inter', sans-serif;
+  --font-family: Arial, sans-serif;
   --max-width: 1200px;
   --padding-x: 1.5rem;
 }
@@ -126,63 +126,88 @@ button:hover {
 .site-header {
   position: sticky;
   top: 0;
+  z-index: 100;
+  /* background-color: #0f0f11; */
+  transition: background-color 0.3s ease;
   backdrop-filter: blur(10px);
-  padding: 0.75rem 0;
-  z-index: 99;
 }
 
 .site-header__inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 10px ;
+  margin-bottom: 10px ;
 }
 
-.site-header__title img {
-  height: 32px;
+.site-header__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.site-header__payments img {
-  height: 20px;
-  margin: 0 0.25rem;
+.header-logo__separator{
+  border: 5px;
+  height: 30px;
+  width: 30px; 
+  border-color: #7f47f4;
+  margin: 1rem 0;
+}
+
+.site-header__title h2 {
+  font-family: 'Bebas Neue', sans-serif; /* o la más similar que uses */
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.payments__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #7f47f4;
+  border-radius: 9999px;
+  padding: 5px 15px;
+}
+
+.payments__text {
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+}
+
+.payments__wrapper img {
+  width: 26px;
+  height: 26px;
+}
+
+.site-header--scrolled {
+  background-color: rgba(15, 15, 17, 0.8); /* patrón de transparencia */
+  backdrop-filter: blur(6px);
+}
+
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .site-header__nav {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.site-header__link {
-  color: var(--color-white);
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.85rem;
-  text-decoration: none;
-}
-
-.site-header__link:hover {
-  color: var(--color-accent);
-}
-
-.site-header__cart {
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-  color: var(--color-white);
-  cursor: pointer;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
+  .site-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .site-header__payments {
-    display: none;
-  }
-
-  .site-header__nav {
-    gap: 0.75rem;
-  }
-
-  .site-header__logo img {
-    height: 28px;
+    order: 3;
   }
 }
 /*!******************************************************************!*\
