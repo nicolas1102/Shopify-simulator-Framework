@@ -7,10 +7,13 @@
     <title>Shopify Simulator | Gradiweb</title>
   </head>
   <body>
-    {% comment %} {% include 'hero-banner.liquid' %} {% endcomment %}
-    {% comment %} {% include 'header.liquid' %} {% endcomment %}
-    {% include 'featured-products.liquid' %}
-    {% comment %} {% include 'footer.liquid' %} {% endcomment %}
+    {% include 'header-banner.liquid' %}
+    <div class="container">
+      {% comment %} {% include 'header.liquid' %} {% endcomment %}
+      {% comment %} {% include 'hero-banner.liquid' %} {% endcomment %}
+      {% include 'featured-products.liquid' %}
+      {% comment %} {% include 'footer.liquid' %} {% endcomment %}
+    </div>
     <script src="/main.js" defer></script>
   </body>
 </html>

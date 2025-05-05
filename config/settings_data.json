@@ -1,12 +1,9 @@
 {
   "sections": {
-    "hero-banner": {
-      "type": "hero-banner",
+    "header-banner": {
+      "type": "header-banner",
       "settings": {
-        "button_text": "Shop Now",
-        "button_link": "/collections/all",
-        "marquee_text": "Free Shipping on Orders Over $100",
-        "background_image": "hero_banner_img.avif"
+        "banner_bar_message": "Free Shipping on Orders Over $100"
       }
     },
     "featured-products": {
@@ -14,6 +11,15 @@
       "settings": {
         "heading": "Our Featured Products",
         "background_color": "#ffffff"
+      }
+    },
+    "hero-banner": {
+      "type": "hero-banner",
+      "settings": {
+        "button_text": "Shop Now",
+        "button_link": "/collections/all",
+        "marquee_text": "Free Shipping on Orders Over $100",
+        "background_image": "hero_banner_img.avif"
       }
     },
     "footer": {
