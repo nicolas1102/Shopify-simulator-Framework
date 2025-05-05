@@ -1,0 +1,14 @@
+<section class="header-banner">
+  <div class="header-banner__wrapper">
+    <div class="header-banner__content">
+      {% for i in (1..10) %}
+        <span class="header-banner__text">
+          <span class="header-banner__star">✦</span>
+          <span>
+            {{ settings['header-banner'].settings.banner_bar_message | upcase }}
+          </span>
+        </span>
+      {% endfor %}
+    </div>
+  </div>
+</section>

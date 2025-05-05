@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/variables.css ***!
   \****************************************************************************/
 :root {
-  --color-bg: #191919;
+  --color-bg: #242424;
   --color-white: #ffffff;
   --color-accent: #762bfb;
   --color-text: #f2f2f2;
@@ -118,6 +118,71 @@ button:hover {
 
   100% {
     transform: translateX(-50%);
+  }
+}
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/header.css ***!
+  \************************************************************************************/
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 0;
+  z-index: 99;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__title img {
+  height: 32px;
+}
+
+.site-header__payments img {
+  height: 20px;
+  margin: 0 0.25rem;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.site-header__link {
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.site-header__link:hover {
+  color: var(--color-accent);
+}
+
+.site-header__cart {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .site-header__payments {
+    display: none;
+  }
+
+  .site-header__nav {
+    gap: 0.75rem;
+  }
+
+  .site-header__logo img {
+    height: 28px;
   }
 }
 /*!******************************************************************!*\
