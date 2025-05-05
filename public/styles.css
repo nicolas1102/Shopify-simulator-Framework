@@ -283,6 +283,41 @@ button:hover {
   }
 }
 
+/*!***********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/products-carousel.css ***!
+  \***********************************************************************************************/
+.products-carousel__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.product-card-wrapper {
+  flex: 1 1 22%;
+  max-width: 240px;
+  transition: transform 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.products-carousel__view-all {
+  padding: 10px 24px;
+  background-color: #7f47f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/footer.css ***!
+  \************************************************************************************/
+
 /*!******************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles.css ***!
   \******************************************************************/

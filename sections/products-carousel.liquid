@@ -1,0 +1,12 @@
+<section class="container products-carousel" id="products-carousel">
+
+  <div class="products-carousel__list" id="carousel-list">
+    {% for product in products %}
+      <div class="product-card-wrapper{% if forloop.index > 4 %} hidden{% endif %}">
+        {% render 'product-card', product: product %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <button class="products-carousel__view-all" id="view-all-btn">View All</button>
+</section>
