@@ -72,6 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
     viewAllBtn.style.display = 'none'; // ocultar botón después de usar
   });
 });
+window.addEventListener('scroll', function () {
+  var header = document.querySelector('.site-header');
+  if (window.scrollY > 10) {
+    header.classList.add('site-header--scrolled');
+  } else {
+    header.classList.remove('site-header--scrolled');
+  }
+});
 })();
 
 /******/ })()

@@ -13,6 +13,7 @@
 
 .header-banner__content {
   padding: 3px 0;
+  gap: 5px;
   display: flex;
 }
 
@@ -25,12 +26,14 @@
 }
 
 .header-banner__star {
-  font-size: 26px;
+  font-size: 20px;
   opacity: 0.6;
+  line-height: 1;
 }
 
 .header-banner__message {
-  padding-top: 5px;
+  padding-top: 2px;
+  line-height: 1;
 }
 
 @keyframes scroll-banner {

@@ -10,6 +10,16 @@
     ]
   },
   {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "payment_methods",
+        "label": "Payment Methods"
+      }
+    ]
+  },
+  {
     "name": "Hero Banner",
     "settings": [
       {
@@ -34,4 +44,34 @@
       }
     ]
   },
+  {
+    "name": "footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "logo_url",
+        "label": "Logo Url"
+      },
+      {
+        "type": "text",
+        "id": "logo_page",
+        "label": "Logo Page"
+      },
+      {
+        "type": "text",
+        "id": "logo_text",
+        "label": "Logo Text"
+      },
+      {
+        "type": "collection",
+        "id": "primary_links",
+        "label": "Primary Links"
+      },
+      {
+        "type": "collection",
+        "id": "secondary_links",
+        "label": "Primary Links"
+      }
+    ]
+  }
 ]
