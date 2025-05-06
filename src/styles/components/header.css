@@ -103,6 +103,13 @@
   cursor: pointer;
 }
 
+@media (max-width: 1024px) and (min-width: 769px) {
+
+  .site-header__payments {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .site-header__inner {
     flex-direction: row;
