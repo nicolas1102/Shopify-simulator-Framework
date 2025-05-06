@@ -92,23 +92,29 @@ button:hover {
 }
 
 .header-banner__wrapper {
-  display: flex;
   animation: scroll-banner 20s linear infinite;
 }
 
 .header-banner__content {
-  padding: 8px 0;
-  gap: 5px;
-}
-
-.header-banner__star {
-  font-size: 20px;
+  padding: 3px 0;
+  display: flex;
 }
 
 .header-banner__text {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   gap: 0 10px;
   font-weight: 800;
+  padding-left: 7px;
+}
+
+.header-banner__star {
+  font-size: 26px;
+  opacity: 0.6;
+}
+
+.header-banner__message {
+  padding-top: 5px;
 }
 
 @keyframes scroll-banner {
@@ -266,6 +272,7 @@ button:hover {
 
 .marquee__star {
   font-size: 40px;
+  color: var(--color-accent);
 }
 
 .marquee__text {
@@ -278,11 +285,11 @@ button:hover {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
-
 /*!***********************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/products-carousel.css ***!
   \***********************************************************************************************/
@@ -314,10 +321,6 @@ button:hover {
   cursor: pointer;
   text-transform: uppercase;
 }
-/*!************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/footer.css ***!
-  \************************************************************************************/
-
 /*!******************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/product-card.css ***!
   \******************************************************************************************/
@@ -361,9 +364,74 @@ button:hover {
   margin: 0 0 10px;
 }
 
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/footer.css ***!
+  \************************************************************************************/
+.site-footer {
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-footer__left,
+.site-footer__center,
+.site-footer__right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.footer-nav__main a,
+.footer-nav__secondary a,
+.social-links a {
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer-nav__main {
+  margin-bottom: 1rem;
+}
+
+.footer__icons img {
+  width: 28px;
+  height: 28px;
+  margin: 0.5rem 0.3rem;
+  border-radius: 50%;
+}
+
+input[type="email"] {
+  background: #191919;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 /*!******************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles.css ***!
   \******************************************************************/
-
+ 
 
 /*# sourceMappingURL=styles.css.map*/

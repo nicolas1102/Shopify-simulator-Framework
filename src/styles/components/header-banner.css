@@ -8,23 +8,29 @@
 }
 
 .header-banner__wrapper {
-  display: flex;
   animation: scroll-banner 20s linear infinite;
 }
 
 .header-banner__content {
-  padding: 8px 0;
-  gap: 5px;
-}
-
-.header-banner__star {
-  font-size: 20px;
+  padding: 3px 0;
+  display: flex;
 }
 
 .header-banner__text {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   gap: 0 10px;
   font-weight: 800;
+  padding-left: 7px;
+}
+
+.header-banner__star {
+  font-size: 26px;
+  opacity: 0.6;
+}
+
+.header-banner__message {
+  padding-top: 5px;
 }
 
 @keyframes scroll-banner {
