@@ -57,8 +57,7 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "copyright": "© 2024, Shuffle.store Operated by Studio Plaid.",
-        "support_email": "Need help? Email: support@shuffle.store",
+        "copyright_n_support_email": "© 2024, Shuffle.store Operated by Studio Plaid. Need help? Email: support@shuffle.store",
         "primary_links": [
           {
             "label": "HOME",

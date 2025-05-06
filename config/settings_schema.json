@@ -64,13 +64,8 @@
     "settings": [
       {
         "type": "text",
-        "id": "copyright",
-        "label": "Copyright"
-      },
-      {
-        "type": "text",
-        "id": "support_email",
-        "label": "Suport Email"
+        "id": "copyright_n_support_email",
+        "label": "Copyright and Suport Email"
       },
       {
         "type": "collection",
