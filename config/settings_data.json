@@ -42,9 +42,16 @@
       "type": "hero-banner",
       "settings": {
         "button_text": "VIEW THE COLLECTION",
-        "button_link": "/collections/all",
+        "button_link": "#",
         "marquee_text": "SHUFFLE ESSENSTIALS",
         "background_image": "hero_banner_img.avif"
+      }
+    },
+    "latest-collection": {
+      "type": "latest-collection",
+      "settings": {
+        "title": "LASTEST COLLECTION",
+        "background_color": "#762bfb"
       }
     },
     "footer": {

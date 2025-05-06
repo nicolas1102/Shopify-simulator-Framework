@@ -45,6 +45,21 @@
     ]
   },
   {
+    "name": "Lastest Collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color"
+      }
+    ]
+  },
+  {
     "name": "footer",
     "settings": [
       {

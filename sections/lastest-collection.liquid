@@ -1,0 +1,46 @@
+<section
+  class="container lastest-collection"
+  id="collections"
+  style="
+    position: relative;
+    z-index: 1;
+  "
+>
+  <span
+    class="lastest-collection__title__container"
+    style="
+      position: relative;
+      z-index: 2;
+    "
+  >
+    <span class="lastest-collection__title__star">✦</span>
+    <span class="lastest-collection__title__text">
+      {{ settings['latest-collection'].settings.title }}
+    </span>
+    <span class="lastest-collection__title__star">✦</span>
+  </span>
+
+  <!-- background -->
+  <div
+    style="
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, {{ settings['latest-collection'].settings.background_color }} 0%, transparent 70%);
+      filter: blur(50px);
+      z-index: 0;
+      pointer-events: none;
+    "
+  ></div>
+
+  <div class="lastest-collection__list">
+    {% assign valid_collections = collections | where_exp: 'item', "item.created_at >= '2025-01-01'" %}
+    {% for collection in valid_collections %}
+      {% render 'collection-card', collection: collection %}
+    {% endfor %}
+  </div>
+</section>
