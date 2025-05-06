@@ -1,12 +1,14 @@
 <section class="hero-banner">
   <div class="container hero-banner__image-wrapper">
-    <img
-      src="/assets/{{settings['hero-banner'].settings.background_image}}"
-      alt="Hero Banner"
-      class="hero-banner__image"
-      width="100%"
-      height="auto"
-    >
+    <div class="image__container">
+      <img
+        src="/assets/{{settings['hero-banner'].settings.background_image}}"
+        alt="Hero Banner"
+        class="hero-banner__image"
+        width="100%"
+        height="auto"
+      >
+    </div>
     <button
       class="hero-banner__button"
       onclick="location.href='{{ settings['hero-banner'].settings.button_link }}'"
@@ -21,7 +23,7 @@
         {% for i in (1..10) %}
           <span class="marquee__text">
             <span class="marquee__star">✦</span>
-            <span class='marquee__message'>{{ settings['hero-banner'].settings.marquee_text }}</span>
+            <span class="marquee__message">{{ settings['hero-banner'].settings.marquee_text }}</span>
           </span>
         {% endfor %}
       </span>
