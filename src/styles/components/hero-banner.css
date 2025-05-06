@@ -7,12 +7,15 @@
 
 .hero-banner__image-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .hero-banner__image {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .hero-banner__button {

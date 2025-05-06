@@ -177,13 +177,6 @@ button:hover {
   margin: 0 5px;
 }
 
-.site-header__title h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
 .payments__wrapper {
   display: flex;
   align-items: center;
@@ -248,12 +241,15 @@ button:hover {
 
 .hero-banner__image-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .hero-banner__image {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .hero-banner__button {
@@ -415,67 +411,132 @@ button:hover {
 /*!************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/components/footer.css ***!
   \************************************************************************************/
-.site-footer {
-  background-color: #0e0e0e;
-  color: #fff;
-  padding: 2rem 1rem;
-  font-family: 'Arial', sans-serif;
-}
-
 .site-footer__inner {
+  padding-top: 32px;
+  padding-bottom: 32px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 32px;
+  font-size: 10px;
 }
 
 .site-footer__left,
-.site-footer__center,
 .site-footer__right {
   flex: 1;
-  min-width: 250px;
+  min-width: 200px;
 }
 
-.footer-logo {
-  width: 100px;
-  margin-bottom: 1rem;
+
+.site-footer__right {
+  margin-top: 20px;
 }
 
-.footer-nav__main a,
-.footer-nav__secondary a,
-.social-links a {
+.site-footer__center {
+  flex: 3;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.site-footer__title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0 40px;
+}
+
+.footer-logo__separator {
+  width: 1px;
+  height: 15px;
+  background-color: #7f47f4;
   display: inline-block;
-  margin-right: 1rem;
+  margin: 0 5px;
+}
+
+.footer-nav__primary {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav__primary a {
+  display: inline-block;
   text-decoration: none;
-  font-weight: bold;
+  color: #fff;
+  font-size: 22px;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-nav__primary a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.footer-nav__primary a:hover::after {
+  width: 100%;
+}
+
+.footer-nav__secondary {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-nav__secondary a {
+  display: inline-block;
+  text-decoration: none;
   color: #fff;
 }
 
-.footer-nav__main {
-  margin-bottom: 1rem;
+.footer-nav__secondary a:hover {
+  text-decoration: underline;
 }
 
-.footer__icons img {
-  width: 28px;
-  height: 28px;
-  margin: 0.5rem 0.3rem;
-  border-radius: 50%;
+.footer-payments__icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 9999px;
+  padding: 8px 14px;
+}
+
+.social-media {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.newsletter-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 40px;
 }
 
 input[type="email"] {
   background: #191919;
   border: none;
-  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  padding: 8px 36px 8px 16px;
   color: white;
-  margin-top: 0.5rem;
   width: 100%;
 }
 
-.social-links {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.newsletter-icon {
+  position: absolute;
+  right: 10px;
+  top: calc(50% + 1px);
+  transform: translateY(-50%);
 }
 /*!******************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles.css ***!

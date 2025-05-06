@@ -50,9 +50,8 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "logo_url": "",
-        "logo_page": "title",
-        "logo_text": "© 2024, Shuffle.store Operated by Studio Plaid. Need help? Email support@shuffle.store",
+        "copyright": "© 2024, Shuffle.store Operated by Studio Plaid.",
+        "support_email": "Need help? Email: support@shuffle.store",
         "primary_links": [
           {
             "label": "HOME",
@@ -73,25 +72,59 @@
         ],
         "secondary_links": [
           {
-            "label": "Refund Policy",
-            "url": "/refund-policy"
+            "label": "REFUND POLICY",
+            "url": "/"
           },
           {
-            "label": "Privacy Policy",
-            "url": "/privacy-policy"
+            "label": "PRIVACY POLICY",
+            "url": "/"
           },
           {
-            "label": "Terms of Service",
-            "url": "/terms-of-service"
+            "label": "TERMS OF SERVICE",
+            "url": "/"
           }
         ],
-        "payments_methods_text": "We accept all major cards, Paypal & crypto",
-        "payments_methods": [
-          "/assets/icons/bitcoin (1).svg",
-          "/assets/icons/ethereum.svg",
-          "/assets/icons/litecoin.svg",
-          "/assets/icons/dogecoin.svg",
-          "/assets/icons/badge-dollar-sign.svg"
+        "footer_payment_methods_text": "We accept all major cards, Paypal & crypto",
+        "footer_payment_methods": [
+          {
+            "alt": "bitcoin",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#f18f19"
+          },
+          {
+            "alt": "bitcoin_2",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#4e4e4e"
+          },
+          {
+            "alt": "bitcoin_3",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#dddddd"
+          },
+          {
+            "alt": "bitcoin_4",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#c5ab41"
+          },
+          {
+            "alt": "bitcoin_5",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#176bc6"
+          }
+        ],
+        "social_media": [
+          {
+            "label": "FACEBOOK",
+            "url": "/"
+          },
+          {
+            "label": "X (TWITTER)",
+            "url": "/"
+          },
+          {
+            "label": "INSTAGRAM",
+            "url": "/"
+          }
         ]
       }
     }

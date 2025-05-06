@@ -49,18 +49,13 @@
     "settings": [
       {
         "type": "text",
-        "id": "logo_url",
-        "label": "Logo Url"
+        "id": "copyright",
+        "label": "Copyright"
       },
       {
         "type": "text",
-        "id": "logo_page",
-        "label": "Logo Page"
-      },
-      {
-        "type": "text",
-        "id": "logo_text",
-        "label": "Logo Text"
+        "id": "support_email",
+        "label": "Suport Email"
       },
       {
         "type": "collection",
@@ -71,6 +66,21 @@
         "type": "collection",
         "id": "secondary_links",
         "label": "Primary Links"
+      },
+      {
+        "type": "text",
+        "id": "footer_payment_methods_text",
+        "label": "Footer Payment Methods Text"
+      },
+      {
+        "type": "collection",
+        "id": "footer_payment_methods",
+        "label": "Footer Payment Methods"
+      },
+      {
+        "type": "collection",
+        "id": "social_media",
+        "label": "Social Media"
       }
     ]
   }
