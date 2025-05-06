@@ -1,15 +1,21 @@
 .collection-card {
   position: relative;
-  border-radius: 6px;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .collection-card:nth-child(3) {
   grid-column: 1 / 3;
+}
+
+.collection-image__container {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
 }
 
 .collection__image {
@@ -27,17 +33,24 @@
   left: 16px;
   margin: 0;
   padding: 6px 12px;
-  background-color: rgba(0, 0, 0, 0.1);
   font-size: 24px;
   border-radius: 4px;
   z-index: 2;
-  transition: background-color 0.3s ease;
-}
-
-.collection-card:hover .collection__title {
-  background-color: rgba(0, 0, 0, 0.514);
+  font-weight: normal;
 }
 
 .collection-card:hover .collection__image {
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .collection__title {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .collection-image__container {
+    height: 500px;
+  }
 }
