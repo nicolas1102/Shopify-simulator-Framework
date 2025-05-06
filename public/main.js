@@ -84,6 +84,34 @@ document.addEventListener('DOMContentLoaded', function () {
     viewAllBtn.style.display = 'none';
   });
 });
+
+// product cart animation
+document.addEventListener('DOMContentLoaded', function () {
+  var cards = document.querySelectorAll('.product-card');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('product-card--visible');
+        observer.unobserve(entry.target); // Para animar solo una vez
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+  cards.forEach(function (card) {
+    return observer.observe(card);
+  });
+  var viewAllBtn = document.getElementById('view-all-btn');
+  viewAllBtn === null || viewAllBtn === void 0 || viewAllBtn.addEventListener('click', function () {
+    document.querySelectorAll('.hidden').forEach(function (el) {
+      return el.classList.remove('hidden');
+    });
+    var newCards = document.querySelectorAll('.product-card:not(.product-card--visible)');
+    newCards.forEach(function (card) {
+      return observer.observe(card);
+    });
+  });
+});
 })();
 
 /******/ })()
