@@ -1,12 +1,12 @@
 .hero-banner {
   position: relative;
   width: 100%;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  /* margin-bottom: 60px; */
 }
 
 .hero-banner__image-wrapper {
   position: relative;
-  text-align: center;
 }
 
 .hero-banner__image {
@@ -17,25 +17,15 @@
 
 .hero-banner__button {
   position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 12px 24px;
-  background-color: #a258f5;
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 14px;
+  bottom: 30px;
+  left: 54px;
 }
 
 .hero-banner__marquee {
   color: var(--color-white);
   overflow: hidden;
+  padding: 20px 0;
   white-space: nowrap;
-  font-weight: bold;
-  font-size: 36px;
 }
 
 .marquee__wrapper {
@@ -44,19 +34,27 @@
 }
 
 .header-banner__content {
-  padding: 8px 0;
-  gap: 5px;
+  padding: 12px 0;
+  gap: 12px;
 }
 
 .marquee__star {
-  font-size: 40px;
+  font-size: 55px;
   color: var(--color-accent);
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.marquee__message {
+  line-height: 1;
 }
 
 .marquee__text {
   display: inline-block;
   gap: 0 10px;
   font-weight: 800;
+  font-size: 40px;
+  font-family: 'Anton', sans-serif;
 }
 
 @keyframes scroll-marquee {

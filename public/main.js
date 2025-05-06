@@ -62,16 +62,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ "./src/styles.css");
 
-document.addEventListener('DOMContentLoaded', function () {
-  var viewAllBtn = document.getElementById('view-all-btn');
-  var hiddenCards = document.querySelectorAll('.product-card-wrapper.hidden');
-  viewAllBtn.addEventListener('click', function () {
-    hiddenCards.forEach(function (card) {
-      return card.classList.remove('hidden');
-    });
-    viewAllBtn.style.display = 'none'; // ocultar botón después de usar
-  });
-});
+
+// blur header
 window.addEventListener('scroll', function () {
   var header = document.querySelector('.site-header');
   if (window.scrollY > 10) {
@@ -79,6 +71,18 @@ window.addEventListener('scroll', function () {
   } else {
     header.classList.remove('site-header--scrolled');
   }
+});
+
+// show all the products
+document.addEventListener('DOMContentLoaded', function () {
+  var viewAllBtn = document.getElementById('view-all-btn');
+  var hiddenCards = document.querySelectorAll('.product-card-wrapper.hidden');
+  viewAllBtn.addEventListener('click', function () {
+    hiddenCards.forEach(function (card) {
+      return card.classList.remove('hidden');
+    });
+    viewAllBtn.style.display = 'none';
+  });
 });
 })();
 

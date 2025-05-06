@@ -7,9 +7,12 @@
       width="100%"
       height="auto"
     >
-    <a href="{{ settings['hero-banner'].settings.button_link }}" class="hero-banner__button">
+    <button
+      class="hero-banner__button"
+      onclick="location.href='{{ settings['hero-banner'].settings.button_link }}'"
+    >
       {{ settings['hero-banner'].settings.button_text }}
-    </a>
+    </button>
   </div>
 
   <div class="hero-banner__marquee">
@@ -18,7 +21,7 @@
         {% for i in (1..10) %}
           <span class="marquee__text">
             <span class="marquee__star">✦</span>
-            <span>{{ settings['hero-banner'].settings.marquee_text }}</span>
+            <span class='marquee__message'>{{ settings['hero-banner'].settings.marquee_text }}</span>
           </span>
         {% endfor %}
       </span>

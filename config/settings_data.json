@@ -41,7 +41,7 @@
     "hero-banner": {
       "type": "hero-banner",
       "settings": {
-        "button_text": "Shop Now",
+        "button_text": "VIEW THE COLLECTION",
         "button_link": "/collections/all",
         "marquee_text": "SHUFFLE ESSENSTIALS",
         "background_image": "hero_banner_img.avif"
