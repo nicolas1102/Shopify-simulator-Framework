@@ -33,16 +33,11 @@
   animation: scroll-marquee 20s linear infinite;
 }
 
-.header-banner__content {
-  padding: 12px 0;
-  gap: 12px;
-}
-
 .marquee__star {
   font-size: 55px;
   color: var(--color-accent);
   line-height: 1;
-  padding: 0 4px;
+  padding: 0 12px;
 }
 
 .marquee__message {

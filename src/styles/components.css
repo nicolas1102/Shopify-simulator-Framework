@@ -26,6 +26,15 @@ button {
   padding: 6px 20px;
 }
 
+.button__icon--rounded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+}
+
 button:hover {
   background-color: #b46bff;
 }
