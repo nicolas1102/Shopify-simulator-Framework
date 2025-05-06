@@ -1,4 +1,4 @@
-.products-carousel{
+.products-carousel {
   margin-bottom: 40px;
 }
 
@@ -19,7 +19,32 @@
   display: none;
 }
 
-#view-all-btn{
+#view-all-btn {
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  #view-all-btn {
+    display: none;
+  }
+
+  .products-carousel__list {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+  }
+
+  .products-carousel__scroll-wrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
+  .product-card-wrapper {
+    flex: 0 0 auto;
+    width: 240px;
+    scroll-snap-align: start;
+  }
 }
