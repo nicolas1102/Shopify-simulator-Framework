@@ -55,33 +55,33 @@
         "primary_links": [
           {
             "label": "HOME",
-            "url": "/"
+            "url": "#"
           },
           {
             "label": "CART",
-            "url": "/cart"
+            "url": "#"
           },
           {
             "label": "ALL PRODUCTS",
-            "url": "/collections/all"
+            "url": "#carousel-list"
           },
           {
             "label": "COLLECTIONS",
-            "url": "/collections"
+            "url": "#collections"
           }
         ],
         "secondary_links": [
           {
             "label": "REFUND POLICY",
-            "url": "/"
+            "url": "#"
           },
           {
             "label": "PRIVACY POLICY",
-            "url": "/"
+            "url": "#"
           },
           {
             "label": "TERMS OF SERVICE",
-            "url": "/"
+            "url": "#"
           }
         ],
         "footer_payment_methods_text": "We accept all major cards, Paypal & crypto",
@@ -115,15 +115,15 @@
         "social_media": [
           {
             "label": "FACEBOOK",
-            "url": "/"
+            "url": "#"
           },
           {
             "label": "X (TWITTER)",
-            "url": "/"
+            "url": "#"
           },
           {
             "label": "INSTAGRAM",
-            "url": "/"
+            "url": "#"
           }
         ]
       }
