@@ -31,6 +31,12 @@ body {
   font-family: var(--font-family);
   line-height: 1.6;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /*!*************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/layout.css ***!
   \*************************************************************************/
@@ -106,10 +112,12 @@ button:hover {
   white-space: nowrap;
   font-weight: bold;
   font-size: 14px;
+  width: 100vw; 
 }
 
 .header-banner__wrapper {
   animation: scroll-banner 20s linear infinite;
+  width: 100%;
 }
 
 .header-banner__content {
@@ -178,6 +186,18 @@ button:hover {
   margin: 0 5px;
 }
 
+.site-header__logo {
+  display: block;
+}
+
+.site-header__logo--mobile {
+  display: none;
+}
+
+.site-header__payments {
+  display: block;
+}
+
 .payments__wrapper {
   display: flex;
   align-items: center;
@@ -220,14 +240,76 @@ button:hover {
   letter-spacing: 1px;
 }
 
+.site-header__title,
+.site-header__nav {
+  flex-shrink: 0;
+}
+
+.site-header__link {
+  display: block;
+}
+
+.site-header__cart {
+  padding: 14px 30px 8px;
+}
+
+.menu--mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .site-header__inner {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+  }
+
+  .site-header__title {
+    gap: 6px;
+  }
+
+  .site-header__nav {
+    gap: 12px;
+  }
+
+  .site-header__cart {
+    padding: 10px 10px 5px;
   }
 
   .site-header__payments {
-    order: 3;
+    display: none;
+  }
+
+  .site-header__logo--mobile {
+    display: block;
+  }
+
+  .site-header__logo {
+    display: none;
+  }
+
+  .site-header__link {
+    display: none;
+  }
+
+  .site-header__page {
+    width: auto;
+    height: 16px;
+  }
+
+  .menu--mobile {
+    display: flex;
+  }
+
+  .cart {
+    height: 22px;
+    width: 22px;
   }
 }
 /*!*****************************************************************************************!*\
@@ -246,12 +328,12 @@ button:hover {
   height: 100%;
 }
 
-.image__container{
+.image__container {
   position: relative;
   border-radius: 6px;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 500px;
   cursor: pointer;
 }
 
@@ -312,6 +394,12 @@ button:hover {
 
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    margin-top: 10px;
   }
 }
 /*!***********************************************************************************************!*\
