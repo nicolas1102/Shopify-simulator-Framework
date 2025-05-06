@@ -27,13 +27,6 @@
   margin: 0 5px;
 }
 
-.site-header__title h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
 .payments__wrapper {
   display: flex;
   align-items: center;
