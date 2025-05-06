@@ -9,7 +9,7 @@
   --color-gray: #1e1e1e;
   --font-family: Arial, sans-serif;
   --max-width: 1200px;
-  --padding-x: 1.5rem;
+  --padding-x: 24px;
 }
 /*!***********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/base.css ***!
@@ -69,9 +69,17 @@ button {
   color: var(--color-white);
   border: none;
   border-radius: 8px;
-  padding: 6px 20px;
+  padding: 14px 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-weight: bold;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'Anton', sans-serif;
+}
+
+.button__icon {
+  padding: 6px 20px;
 }
 
 button:hover {
@@ -143,7 +151,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px 24px;
 }
 
 .site-header__title {
@@ -189,7 +197,7 @@ button:hover {
 }
 
 .site-header--scrolled {
-  background-color: rgba(15, 15, 17, 0.6);
+  background-color: rgba(15, 15, 17, 0.4);
   backdrop-filter: blur(6px);
 }
 
@@ -225,12 +233,12 @@ button:hover {
 .hero-banner {
   position: relative;
   width: 100%;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  /* margin-bottom: 60px; */
 }
 
 .hero-banner__image-wrapper {
   position: relative;
-  text-align: center;
 }
 
 .hero-banner__image {
@@ -241,25 +249,15 @@ button:hover {
 
 .hero-banner__button {
   position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 12px 24px;
-  background-color: #a258f5;
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 14px;
+  bottom: 30px;
+  left: 54px;
 }
 
 .hero-banner__marquee {
   color: var(--color-white);
   overflow: hidden;
+  padding: 20px 0;
   white-space: nowrap;
-  font-weight: bold;
-  font-size: 36px;
 }
 
 .marquee__wrapper {
@@ -268,19 +266,27 @@ button:hover {
 }
 
 .header-banner__content {
-  padding: 8px 0;
-  gap: 5px;
+  padding: 12px 0;
+  gap: 12px;
 }
 
 .marquee__star {
-  font-size: 40px;
+  font-size: 55px;
   color: var(--color-accent);
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.marquee__message {
+  line-height: 1;
 }
 
 .marquee__text {
   display: inline-block;
   gap: 0 10px;
   font-weight: 800;
+  font-size: 40px;
+  font-family: 'Anton', sans-serif;
 }
 
 @keyframes scroll-marquee {

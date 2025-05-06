@@ -13,9 +13,17 @@ button {
   color: var(--color-white);
   border: none;
   border-radius: 8px;
-  padding: 6px 20px;
+  padding: 14px 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-weight: bold;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'Anton', sans-serif;
+}
+
+.button__icon {
+  padding: 6px 20px;
 }
 
 button:hover {
