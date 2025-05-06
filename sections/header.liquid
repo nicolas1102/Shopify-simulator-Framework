@@ -1,30 +1,45 @@
 <header class="site-header">
   <div class="container site-header__inner">
-    <!-- Logo -->
     <div class="site-header__title">
-      <img src="/assets/header_logo.png" alt="Shuffle Store logo" width="100" height="auto" class="site-header__logo">
+      <img src="/assets/header_logo.png" alt="Shuffle logo" width="auto" height="30" class="site-header__logo">
       <span class="header-logo__separator"></span>
-      <h2>STORE</h2>
+      <img
+        src="/assets/header_section.png"
+        alt="Shuffle Store Section"
+        width="auto"
+        height="25"
+        class="site-header__logo"
+      >
     </div>
 
-    <!-- Payment Icons -->
     <div class="site-header__payments">
       <div class="payments__wrapper">
         <span class="payments__text">We Accept</span>
-        <img src="/assets/icons/bitcoin (1).svg" alt="bitcoin" width="50" height="50">
-        <img src="/assets/icons/ethereum.svg" alt="ethereum" width="50" height="50">
-        <img src="/assets/icons/litecoin.svg" alt="litecoin" width="50" height="50">
-        <img src="/assets/icons/dogecoin.svg" alt="dogecoin" width="50" height="50">
-        <img src="/assets/icons/badge-dollar-sign.svg" alt="badge-dollar" width="50" height="50">
+        {% for payment_method in settings.header.settings.payment_methods %}
+          <img
+            src="{{ payment_method.icon_url }}"
+            alt="{{ payment_method.alt }}"
+            width="50"
+            height="50"
+            style="
+              background-color: {{ payment_method.color }};
+              fill: white;
+              border-radius: 50%;
+              padding: 2px;
+              display: inline-block;
+              object-fit: contain;
+            "
+          >
+        {% endfor %}
       </div>
     </div>
 
-    <!-- Nav + Cart -->
     <nav class="site-header__nav">
       <a href="#products-carousel" class="site-header__link">All Products</a>
       <a href="#collections" class="site-header__link">Collections</a>
       <button class="site-header__cart" aria-label="Cart">
-        <img src="/assets/icons/shopping-cart.svg" alt="badge-dollar" width="50" height="50"></button>
+        <img src="/assets/icons/shopping-cart.svg" alt="cart" width="30" height="30">
+      </button>
     </nav>
   </div>
 </header>

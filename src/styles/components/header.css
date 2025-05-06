@@ -2,7 +2,6 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  /* background-color: #0f0f11; */
   transition: background-color 0.3s ease;
   backdrop-filter: blur(10px);
 }
@@ -11,8 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px ;
-  margin-bottom: 10px ;
+  padding: 10px 0;
 }
 
 .site-header__title {
@@ -21,16 +19,16 @@
   gap: 10px;
 }
 
-.header-logo__separator{
-  border: 5px;
+.header-logo__separator {
+  width: 1px;
   height: 30px;
-  width: 30px; 
-  border-color: #7f47f4;
-  margin: 1rem 0;
+  background-color: #7f47f4;
+  display: inline-block;
+  margin: 0 5px;
 }
 
 .site-header__title h2 {
-  font-family: 'Bebas Neue', sans-serif; /* o la más similar que uses */
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 28px;
   color: #fff;
   letter-spacing: 1px;
@@ -39,16 +37,17 @@
 .payments__wrapper {
   display: flex;
   align-items: center;
-  gap: 10px;
-  border: 2px solid #7f47f4;
+  gap: 6px;
+  border: 1px solid #7f47f4;
   border-radius: 9999px;
-  padding: 5px 15px;
+  padding: 8px 14px;
+  background-color: var(--color-gray);
 }
 
 .payments__text {
-  font-weight: bold;
   color: white;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1;
 }
 
 .payments__wrapper img {
@@ -57,7 +56,7 @@
 }
 
 .site-header--scrolled {
-  background-color: rgba(15, 15, 17, 0.8); /* patrón de transparencia */
+  background-color: rgba(15, 15, 17, 0.6);
   backdrop-filter: blur(6px);
 }
 
@@ -71,8 +70,10 @@
 
 .site-header__nav {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 768px) {

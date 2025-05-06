@@ -3,7 +3,39 @@
     "header-banner": {
       "type": "header-banner",
       "settings": {
-        "banner_bar_message": "Free Shipping on Orders Over $100"
+        "banner_bar_message": "FREE SHIPPING ON ORDERS OVER $100"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "payment_methods": [
+          {
+            "alt": "bitcoin",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#f18f19"
+          },
+          {
+            "alt": "bitcoin_2",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#4e4e4e"
+          },
+          {
+            "alt": "bitcoin_3",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#dddddd"
+          },
+          {
+            "alt": "bitcoin_4",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#c5ab41"
+          },
+          {
+            "alt": "bitcoin_5",
+            "icon_url": "/assets/icons/bitcoin.svg",
+            "color": "#176bc6"
+          }
+        ]
       }
     },
     "hero-banner": {
@@ -18,24 +50,28 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "logo_text": "MyShopify",
-        "links": [
+        "logo_url": "",
+        "logo_page": "title",
+        "logo_text": "© 2024, Shuffle.store Operated by Studio Plaid. Need help? Email support@shuffle.store",
+        "primary_links": [
           {
-            "label": "Home",
+            "label": "HOME",
             "url": "/"
           },
           {
-            "label": "Cart",
+            "label": "CART",
             "url": "/cart"
           },
           {
-            "label": "All Products",
+            "label": "ALL PRODUCTS",
             "url": "/collections/all"
           },
           {
-            "label": "Collections",
+            "label": "COLLECTIONS",
             "url": "/collections"
-          },
+          }
+        ],
+        "secondary_links": [
           {
             "label": "Refund Policy",
             "url": "/refund-policy"
@@ -48,6 +84,14 @@
             "label": "Terms of Service",
             "url": "/terms-of-service"
           }
+        ],
+        "payments_methods_text": "We accept all major cards, Paypal & crypto",
+        "payments_methods": [
+          "/assets/icons/bitcoin (1).svg",
+          "/assets/icons/ethereum.svg",
+          "/assets/icons/litecoin.svg",
+          "/assets/icons/dogecoin.svg",
+          "/assets/icons/badge-dollar-sign.svg"
         ]
       }
     }
