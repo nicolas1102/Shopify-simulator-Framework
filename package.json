@@ -15,11 +15,18 @@
   "author": "miguelgradi",
   "license": "ISC",
   "dependencies": {
+    "aos": "^2.3.4",
     "express": "^4.21.2",
-    "liquidjs": "^10.20.1"
+    "liquidjs": "^10.20.1",
+    "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.1",
+    "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.9.2",
     "sass": "^1.62.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.2",

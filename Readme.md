@@ -1,145 +1,132 @@
-# Shopify Simulator Documentation
+# Shopify Simulator Landing Page – Gradiweb Technical Test
 
-Welcome to **Shopify Simulator**, a lightweight environment designed to help developers explore Shopify's Liquid templating language and dynamic section-based architecture. This project simulates Shopify's core functionalities, enabling developers to practice creating reusable components, iterating through data, and working with dynamic settings.
-
----
-
-## **Project Structure**
-
-```
-/simulator
-├── /config
-│   ├── settings_schema.json      # Defines configurable settings for sections
-│   ├── settings_data.json        # Stores dynamic data for rendering sections
-├── /data
-│   ├── products.json             # Sample product data
-│   ├── collections.json          # Sample collection data
-├── /public
-│   ├── styles.css                # Compiled CSS file
-│   ├── main.js                   # Compiled JavaScript file
-├── /sections
-│   ├── featured-products.liquid  # Main section rendering product lists
-├── /snippets
-│   ├── product-card.liquid       # Reusable snippet for individual product cards
-├── /templates
-│   ├── index.liquid              # Main template file
-├── /src
-│   ├── styles.scss               # Base SASS file
-│   ├── app.js                    # Base JavaScript logic
-├── /assets                       # Images for products, banners, and collections
-├── package.json
-├── webpack.config.js
-├── server.js
-```
+Este es el resultado de mi prueba técnica para Gradiweb usando el framework Shopify Simulator. El objetivo fue construir una landing page **responsiva y pixel-perfect** basada en los diseños entregados para desktop y mobile.
 
 ---
 
-## **Liquid Basics**
+## 🎯 Objetivo
 
-Liquid is a templating language used in Shopify to dynamically render content. Below are the key concepts you'll use in this simulator:
+Construir una landing page con:
 
-### **Sections**
-
-Sections are modular components that render specific parts of a page. For example, the `featured-products.liquid` file is a section that displays a list of products. Sections can:
-
-- Access dynamic data from `settings_data.json`.
-- Be configured through a schema defined in `settings_schema.json`.
-
-Example:
-
-```liquid
-<section class="featured-products">
-  <h2>{{ settings['featured-products'].settings.heading }}</h2>
-</section>
-```
-
-### **Snippets**
-
-Snippets are reusable components, such as a product card. You can include a snippet using the `{% render %}` tag:
-
-Example:
-
-```liquid
-<div class="product-list">
-  {% for product in products %}
-    {% render 'product-card', product: product %}
-  {% endfor %}
-</div>
-```
-
-### **Iterating Over Objects**
-
-Liquid allows you to iterate over arrays, such as products or collections:
-
-```liquid
-<ul>
-  {% for product in products %}
-    <li>{{ product.title }} - ${{ product.price }}</li>
-  {% endfor %}
-</ul>
-```
-
-### **Filters**
-
-Filters are used to manipulate output. Some common filters:
-
-- `capitalize`: Capitalizes the first letter.
-- `date`: Formats a date.
-- `money`: Formats a number as currency.
-
-Example:
-
-```liquid
-{{ product.price | money }}
-{{ product.created_at | date: "%B %d, %Y" }}
-```
+- HTML semántico y accesible.
+- CSS modular usando **BEM**.
+- JavaScript limpio y reutilizable (sin frameworks).
+- Scroll y animaciones suaves.
+- Datos dinámicos desde `settings_data.json`.
 
 ---
 
-## **Dynamic Configuration**
+## ✅ Secciones implementadas
 
-### **Schema (`settings_schema.json`)**
+### 1. **Top Bar**
+- Comportamiento tipo marquee animado.
+- Texto dinámico desde `settings_data.json`.
+- Efecto de filtro morado a los lados.
 
-The schema defines the settings available for a section. While it's necessary in Shopify, it might not be required here.
+### 2. **Header**
+- Sticky con fondo transparente al hacer scroll.
+- Logo, separador y medios de pago (centrado).
+- Links con scroll interno: "All products" y "Collections".
+- Botón de carrito presentacional.
+- Responsivo en pantallas pequeñas con menú hamburguesa.
 
-### **Data (`settings_data.json`)**
+### 3. **Hero Banner**
+- Imagen con hover animado y botón dinámico.
+- Texto y enlace del botón desde `settings_data.json`.
+- Marquee inferior animado con estrellas y texto dinámico.
 
-This file contains the dynamic values for settings
+### 4. **Carrusel de Productos**
+- Muestra 4 productos visibles + 6 ocultos.
+- Botón "View All" revela los ocultos con JavaScript.
+- Hover animado que hace zoom a la imagen.
+- Renderiza nombre, precio y tags del producto.
 
-## **Setup Instructions**
+### 5. **Últimas Colecciones**
+- Título centrado y decorado con estrellas ✦.
+- Muestra solo colecciones creadas desde el 2025-01-01.
+- Fondo con `radial-gradient` dinámico y difuminado.
 
-### **Install Dependencies**
+### 6. **Footer**
+- Columna izquierda: logo y textos dinámicos.
+- Columna central: links principales y secundarios (mayúsculas desde Liquid, no CSS).
+- Columna derecha: input de newsletter, íconos de redes sociales.
+- 100% responsive.
 
-```bash
-npm install
+---
+
+## 💡 Extras añadidos
+
+- 🎨 Animaciones en scroll con AOS.
+- ✨ Hover y transiciones suaves para mejorar UX.
+- 🔍 SEO básico: `meta`, `title`, `favicon`, `alt` en imágenes.
+- 📦 Código modular y limpio.
+- 🧪 Buenas prácticas en estructura CSS y JS.
+
+---
+
+## 🛠️ Stack técnico
+
+- Liquid (templating)
+- HTML5 semántico
+- SCSS usando BEM
+- Vanilla JavaScript (sin frameworks)
+- Webpack (optimizaciones propias añadidas)
+
+---
+
+## 📂 Estructura del proyecto
+
 ```
-
-### **Run the Server**
-
-```bash
-npm start
-```
-
-### **Build Styles and Scripts**
-
-```bash
-npm run build
+├── sections/
+│   ├── header.liquid
+│   ├── footer.liquid
+│   ├── hero-banner.liquid
+│   ├── products-carousel.liquid
+│   └── lastest-collection.liquid
+├── assets/
+│   └── imágenes y logos
+├── src/
+│   ├── styles/
+│   └── scripts/
+├── settings_data.json
+├── index.html
+└── README.md
 ```
 
 ---
 
-## **Additional Notes**
+## 🚀 Cómo ejecutar localmente
 
-### **Assets**
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/Shopify-simulator-Framework.git
+   ```
 
-All product, banner, and collection images are stored in the `/assets` folder. Refer to the `data/products.json` and `data/collections.json` files for mappings.
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-### **Testing the Application**
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-Visit `http://localhost:3000` in your browser to view the simulator in action.
+4. Para generar build de producción:
+   ```bash
+   npm run build
+   ```
 
 ---
 
-Feel free to customize the simulator further to match your requirements. Happy coding! 🚀
+## 📬 Comentarios finales
 
-For more information about Liquid, refer to the [official Liquid documentation](https://liquidjs.com/tutorials/intro-to-liquid.html).
+Esta prueba me permitió demostrar atención al detalle, adaptación a tecnologías nuevas como Liquid y trabajar bajo estándares de calidad y diseño visual. ¡Gracias por la oportunidad!
+
+## 👨‍💻 Autor
+
+**Nicolás Díaz**  
+Frontend Developer  
+[GitHub](https://github.com/nicolas1102) – [LinkedIn](https://www.linkedin.com/in/nicolas-diaz-vargas/)
+
+---

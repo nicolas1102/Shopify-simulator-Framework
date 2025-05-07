@@ -1,0 +1,162 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+}
+
+.site-header__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo__separator {
+  width: 1px;
+  height: 30px;
+  background-color: #7f47f4;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.site-header__logo {
+  display: block;
+}
+
+.site-header__logo--mobile {
+  display: none;
+}
+
+.site-header__payments {
+  display: block;
+}
+
+.payments__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #7f47f4;
+  border-radius: 9999px;
+  padding: 8px 14px;
+  background-color: var(--color-gray);
+}
+
+.payments__text {
+  color: white;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.payments__wrapper img {
+  width: 26px;
+  height: 26px;
+}
+
+.site-header--scrolled {
+  background-color: rgba(15, 15, 17, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  letter-spacing: 1px;
+}
+
+.site-header__title,
+.site-header__nav {
+  flex-shrink: 0;
+}
+
+.site-header__link {
+  display: block;
+}
+
+.site-header__cart {
+  padding: 14px 30px 8px;
+}
+
+.menu--mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+
+  .site-header__payments {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+  }
+
+  .site-header__title {
+    gap: 6px;
+  }
+
+  .site-header__nav {
+    gap: 12px;
+  }
+
+  .site-header__cart {
+    padding: 10px 10px 5px;
+  }
+
+  .site-header__payments {
+    display: none;
+  }
+
+  .site-header__logo--mobile {
+    display: block;
+  }
+
+  .site-header__logo {
+    display: none;
+  }
+
+  .site-header__link {
+    display: none;
+  }
+
+  .site-header__page {
+    width: auto;
+    height: 16px;
+  }
+
+  .menu--mobile {
+    display: flex;
+  }
+
+  .cart {
+    height: 22px;
+    width: 22px;
+  }
+}

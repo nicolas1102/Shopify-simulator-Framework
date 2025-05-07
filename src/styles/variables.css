@@ -1,0 +1,10 @@
+:root {
+  --color-bg: #242424;
+  --color-white: #ffffff;
+  --color-accent: #762bfb;
+  --color-text: #f2f2f2;
+  --color-gray: #1e1e1e;
+  --font-family: 'Aeonik', Arial, sans-serif;
+  --max-width: 1200px;
+  --padding-x: 24px;
+}

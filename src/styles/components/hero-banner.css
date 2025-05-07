@@ -1,0 +1,88 @@
+.hero-banner {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.hero-banner__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.image__container {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  cursor: pointer;
+}
+
+.hero-banner__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image__container:hover .hero-banner__image {
+  transform: scale(1.05);
+}
+
+.hero-banner__button {
+  position: absolute;
+  bottom: 30px;
+  left: 54px;
+}
+
+.hero-banner__marquee {
+  color: var(--color-white);
+  overflow: hidden;
+  padding: 20px 0;
+  white-space: nowrap;
+}
+
+.marquee__wrapper {
+  display: flex;
+  animation: scroll-marquee 20s linear infinite;
+}
+
+.marquee__star {
+  font-size: 55px;
+  color: var(--color-accent);
+  line-height: 1;
+  padding: 0 12px;
+  filter: drop-shadow(rgba(172, 133, 255, 0.8) 0px 0px 6px);
+}
+
+.marquee__message {
+  line-height: 1;
+}
+
+.marquee__text {
+  display: inline-block;
+  gap: 0 10px;
+  font-weight: 800;
+  font-size: 50px;
+  font-family: 'Countach', sans-serif;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    margin-top: 10px;
+  }
+}

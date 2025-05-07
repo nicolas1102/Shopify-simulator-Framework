@@ -1,18 +1,49 @@
-const path = require('path');
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'main.js',
+    clean: true,
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },
+  resolve: {
+    extensions: ['.js', '.scss'],
+  },
   mode: 'development',
-};
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/assets', to: 'assets' }, // Copia todo a /public/assets
+      ],
+    }),
+  ],
+}

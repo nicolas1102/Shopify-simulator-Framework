@@ -1,0 +1,15 @@
+<section class="header-banner">
+  <div class="header-banner__wrapper">
+    <div class="header-banner__content">
+      {% comment %} To repeat the component and give a sense of infinity {% endcomment %}
+      {% for i in (1..10) %}
+        <span class="header-banner__text">
+          <span class='header-banner__message'>
+            {{ settings['header-banner'].settings.banner_bar_message | upcase }}
+          </span>
+          <span class="header-banner__star">✦</span>
+        </span>
+      {% endfor %}
+    </div>
+  </div>
+</section>

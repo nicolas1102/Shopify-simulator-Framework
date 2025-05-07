@@ -1,0 +1,64 @@
+<footer class="container site-footer__inner">
+  <div class="site-footer__left">
+    <div class="site-footer__title">
+      <img src="/assets/Logo-Icon.png" alt="Shuffle icon" width="auto" height="80" class="site-footer__icon">
+      <span class="footer-logo__separator"></span>
+      <img
+        src="/assets/header_section.png"
+        alt="Shuffle Store Section"
+        width="auto"
+        height="30"
+        class="site-footer__page"
+      >
+    </div>
+    <p>{{ settings.footer.settings.copyright_n_support_email }}</p>
+  </div>
+
+  <div class="site-footer__center">
+    <nav class="footer-nav__primary">
+      {% for link in settings.footer.settings.primary_links %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+      {% endfor %}
+    </nav>
+    <nav class="footer-nav__secondary">
+      {% for link in settings.footer.settings.secondary_links %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+      {% endfor %}
+    </nav>
+    <div class="footer-payments__icons">
+      <p>{{ settings.footer.settings.footer_payment_methods_text }}</p>
+      {% for payment_method in settings.footer.settings.footer_payment_methods %}
+        <img
+          src="{{ payment_method.icon_url }}"
+          alt="{{ payment_method.alt }}"
+          width="24"
+          height="24"
+          style="
+            background-color: {{ payment_method.color }};
+            fill: white;
+            border-radius: 50%;
+            padding: 6px;
+            display: inline-block;
+            object-fit: contain;
+            cursor: pointer;
+          "
+        >
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="site-footer__right">
+    <label for="newsletter">Subscribe and receive drop notifications</label>
+    <div class="newsletter-wrapper">
+      <input type="email" placeholder="Enter Email" id="newsletter">
+      <span class="newsletter-icon">
+        <img src="/assets/icons/arrow-right.svg" alt="Submit icon" width="24" height="24">
+      </span>
+    </div>
+    <div class="social-media">
+      {% for social_network in settings.footer.settings.social_media %}
+        <a href="{{ social_network.url }}">{{ social_network.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</footer>

@@ -1,16 +1,101 @@
 [
   {
-    "name": "Featured Products",
+    "name": "Header Banner",
     "settings": [
       {
         "type": "text",
-        "id": "heading",
-        "label": "Heading Text"
+        "id": "banner_bar_message",
+        "label": "Banner Bar Message",
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "payment_methods",
+        "label": "Payment Methods"
+      }
+    ]
+  },
+  {
+    "name": "Hero Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+      },
+      {
+        "type": "text",
+        "id": "button_link",
+        "label": "Button Link",
+      },
+      {
+        "type": "text",
+        "id": "background_image",
+        "label": "Background Image",
+      },
+      {
+        "type": "text",
+        "id": "marquee_text",
+        "label": "Top Bar Message",
+      }
+    ]
+  },
+  {
+    "name": "Lastest Collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
       },
       {
         "type": "color",
         "id": "background_color",
         "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "lastest_collection_banner_url",
+        "label": "Lastest Collection Banner URL"
+      }
+    ]
+  },
+  {
+    "name": "footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "copyright_n_support_email",
+        "label": "Copyright and Suport Email"
+      },
+      {
+        "type": "collection",
+        "id": "primary_links",
+        "label": "Primary Links"
+      },
+      {
+        "type": "collection",
+        "id": "secondary_links",
+        "label": "Primary Links"
+      },
+      {
+        "type": "text",
+        "id": "footer_payment_methods_text",
+        "label": "Footer Payment Methods Text"
+      },
+      {
+        "type": "collection",
+        "id": "footer_payment_methods",
+        "label": "Footer Payment Methods"
+      },
+      {
+        "type": "collection",
+        "id": "social_media",
+        "label": "Social Media"
       }
     ]
   }

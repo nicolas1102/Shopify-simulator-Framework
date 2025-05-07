@@ -1,11 +1,27 @@
-<div class="product-card">
-  <h3>{{ product.title }}</h3>
-  <p>Price: ${{ product.price }}</p>
-  {% if product.tags %}
-    <ul>
-      {% for tag in product.tags %}
-        <li>{{ tag }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+<div class="product-card" >
+  <div class="product-card__image-wrapper">
+    <img
+      src="/assets/{{ product.image }}"
+      alt="{{ product.title }}"
+      class="product-card__image"
+    >
+  </div>
+
+  <div class="product-card__info__container">
+    <div class="product-card__info">
+      {% if product.tags %}
+        <ul class="product-card__tags">
+          {% for tag in product.tags %}
+            <li class="product-card__tag">#{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <h3 class="product-card__title">{{ product.title }}</h3>
+      <p class="product-card__price">${{ product.price }} USD</p>
+    </div>
+
+    <button class="button__icon--rounded add-product" aria-label="Add to cart">
+      <img src="/assets/icons/shopping-cart.svg" alt="cart" width="24" height="24">
+    </button>
+  </div>
 </div>

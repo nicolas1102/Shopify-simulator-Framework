@@ -1,0 +1,49 @@
+.header-banner {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 14px;
+  width: 100%;
+}
+
+.header-banner__wrapper {
+  animation: scroll-banner 20s linear infinite;
+  width: 100%;
+}
+
+.header-banner__content {
+  padding: 12px 0 15px;
+  gap: 5px;
+  display: flex;
+}
+
+.header-banner__text {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  font-weight: 800;
+  padding-left: 7px;
+}
+
+.header-banner__star {
+  font-size: 20px;
+  opacity: 0.6;
+  line-height: 1;
+}
+
+.header-banner__message {
+  padding-top: 4px;
+  line-height: 1;
+}
+
+@keyframes scroll-banner {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

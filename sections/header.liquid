@@ -1,0 +1,58 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <div class="site-header__title">
+      {% comment %} Mobile view {% endcomment %}
+      <div class="menu--mobile">
+        <img src="/assets/icons/menu.svg" alt="cart" width="30" height="30" class="burger">
+      </div>
+      <img src="/assets/header_logo.png" alt="Shuffle logo" width="auto" height="30" class="site-header__logo">
+
+      <img
+        src="/assets/Logo-Icon.png"
+        alt="Shuffle icon"
+        width="auto"
+        height="30"
+        class="site-header__logo--mobile"
+      >
+      <span class="header-logo__separator"></span>
+      <img
+        src="/assets/header_section.png"
+        alt="Shuffle Store Section"
+        width="auto"
+        height="25"
+        class="site-header__page"
+      >
+    </div>
+
+    <div class="site-header__payments">
+      <div class="payments__wrapper">
+        <span class="payments__text">We Accept</span>
+        {% for payment_method in settings.header.settings.payment_methods %}
+          <img
+            src="{{ payment_method.icon_url }}"
+            alt="{{ payment_method.alt }}"
+            width="50"
+            height="50"
+            style="
+              background-color: {{ payment_method.color }};
+              fill: white;
+              border-radius: 50%;
+              padding: 2px;
+              display: inline-block;
+              object-fit: contain;
+              cursor:pointer;
+            "
+          >
+        {% endfor %}
+      </div>
+    </div>
+
+    <nav class="site-header__nav">
+      <a href="#products-carousel" class="site-header__link">All Products</a>
+      <a href="#collections" class="site-header__link">Collections</a>
+      <button class="site-header__cart button__icon" aria-label="Cart">
+        <img src="/assets/icons/shopping-cart.svg" alt="cart" width="30" height="30" class="cart">
+      </button>
+    </nav>
+  </div>
+</header>
