@@ -99,7 +99,7 @@ Construir una landing page con:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/Shopify-simulator-Framework.git
+   git clone https://github.com/nicolas1102/Shopify-simulator-Framework.git
    ```
 
 2. Instala las dependencias:
