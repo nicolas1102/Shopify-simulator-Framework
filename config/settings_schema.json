@@ -56,6 +56,11 @@
         "type": "color",
         "id": "background_color",
         "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "lastest_collection_banner_url",
+        "label": "Lastest Collection Banner URL"
       }
     ]
   },

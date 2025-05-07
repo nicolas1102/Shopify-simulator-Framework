@@ -29,14 +29,15 @@
 
 .collection__title {
   position: absolute;
-  bottom: 32px;
-  left: 16px;
+  bottom: 28px;
+  left: 14px;
   margin: 0;
   padding: 6px 12px;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 4px;
   z-index: 2;
   font-weight: normal;
+  filter: drop-shadow(rgba(21, 19, 27, 0.918) 0px 0px 6px);
 }
 
 .collection-card:hover .collection__image {

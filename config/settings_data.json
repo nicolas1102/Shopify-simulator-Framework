@@ -51,7 +51,8 @@
       "type": "latest-collection",
       "settings": {
         "title": "LASTEST COLLECTION",
-        "background_color": "#762bfb"
+        "background_color": "#762bfb",
+        "lastest_collection_banner_url": "/assets/ket_club.jpg"
       }
     },
     "footer": {

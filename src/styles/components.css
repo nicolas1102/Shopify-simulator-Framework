@@ -17,9 +17,9 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 800;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Countach', sans-serif;
 }
 
 .button__icon {

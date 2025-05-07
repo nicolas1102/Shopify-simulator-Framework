@@ -20,16 +20,16 @@
     <span class="lastest-collection__title__star">✦</span>
   </span>
 
-  <!-- background -->
+  <!-- background color -->
   <div
     style="
       content: '';
       position: absolute;
-      top: 0px;
+      top: -50px;
       left: 50%;
       transform: translateX(-50%);
-      width: 280px;
-      height: 100px;
+      width: 400px;
+      height: 400px;
       background: radial-gradient(circle, {{ settings['latest-collection'].settings.background_color }} 0%, transparent 70%);
       filter: blur(50px);
       z-index: 0;
@@ -42,5 +42,16 @@
     {% for collection in valid_collections %}
       {% render 'collection-card', collection: collection %}
     {% endfor %}
+  </div>
+
+  <div class="collection-card">
+    <div class="collection-image__container">
+      <img
+        src="{{ settings['latest-collection'].settings.lastest_collection_banner_url }}"
+        alt="{{ collection.title }}"
+        class="collection__image"
+      >
+    </div>
+    <h3 class="collection__title">{{ collection.title }}</h3>
   </div>
 </section>

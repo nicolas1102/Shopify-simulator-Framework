@@ -24,6 +24,29 @@
   margin: 0 auto;
 }
 
+.products-carousel__scroll-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.products-carousel__scroll-wrapper::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+.products-carousel__scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-radius: 4px;
+}
+
+.products-carousel__scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
+}
+
+.products-carousel__scroll-wrapper {
+  scrollbar-color: var(--color-accent) #583891;
+  scrollbar-width: thin;
+}
+
 @media (max-width: 768px) {
   #view-all-btn {
     display: none;

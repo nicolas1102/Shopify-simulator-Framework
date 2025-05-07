@@ -7,7 +7,7 @@
   --color-accent: #762bfb;
   --color-text: #f2f2f2;
   --color-gray: #1e1e1e;
-  --font-family: Arial, sans-serif;
+  --font-family: 'Aeonik', Arial, sans-serif;
   --max-width: 1200px;
   --padding-x: 24px;
 }
@@ -80,9 +80,9 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 800;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Countach', sans-serif;
 }
 
 .button__icon {
@@ -380,6 +380,7 @@ button:hover {
   color: var(--color-accent);
   line-height: 1;
   padding: 0 12px;
+  filter: drop-shadow(rgba(172, 133, 255, 0.8) 0px 0px 6px);
 }
 
 .marquee__message {
@@ -390,8 +391,8 @@ button:hover {
   display: inline-block;
   gap: 0 10px;
   font-weight: 800;
-  font-size: 40px;
-  font-family: 'Anton', sans-serif;
+  font-size: 50px;
+  font-family: 'Countach', sans-serif;
 }
 
 @keyframes scroll-marquee {
@@ -436,6 +437,29 @@ button:hover {
 #view-all-btn {
   display: block;
   margin: 0 auto;
+}
+
+.products-carousel__scroll-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.products-carousel__scroll-wrapper::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+.products-carousel__scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-radius: 4px;
+}
+
+.products-carousel__scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
+}
+
+.products-carousel__scroll-wrapper {
+  scrollbar-color: var(--color-accent) #583891;
+  scrollbar-width: thin;
 }
 
 @media (max-width: 768px) {
@@ -566,6 +590,7 @@ button:hover {
   color: var(--color-accent);
   line-height: 1;
   padding: 0 12px;
+  filter: drop-shadow(rgba(172, 133, 255, 0.8) 0px 0px 6px);
 }
 
 .lastest-collection__title__text {
@@ -627,14 +652,15 @@ button:hover {
 
 .collection__title {
   position: absolute;
-  bottom: 32px;
-  left: 16px;
+  bottom: 28px;
+  left: 14px;
   margin: 0;
   padding: 6px 12px;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 4px;
   z-index: 2;
   font-weight: normal;
+  filter: drop-shadow(rgba(21, 19, 27, 0.918) 0px 0px 6px);
 }
 
 .collection-card:hover .collection__image {
@@ -713,6 +739,7 @@ button:hover {
   position: relative;
   text-decoration: none;
   font-weight: 500;
+  width: fit-content;
 }
 
 .footer-nav__primary a::after {
@@ -844,6 +871,18 @@ input[type="email"] {
 /*!******************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles.css ***!
   \******************************************************************/
- 
+@font-face {
+  font-family: 'Aeonik';
+  src: url(f252af9282d8460f6582.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Countach';
+  src: url(8a0bf07ce546c7963e4f.otf);
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*# sourceMappingURL=styles.css.map*/
